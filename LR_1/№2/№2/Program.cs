@@ -18,6 +18,12 @@ namespace _2
                 Random rnd = new Random();
                 rand[i] = rnd.Next(-2000, 2000);
             }
+            List <int> a = new List<int>();
+             for (int i = 0; i <= rand.Length; i++) 
+            {
+                if ((rand[i] % 10) == 4 ) a.Add(rand[i]);
+            }
+             string vyvod = "[" + string.Join(",", a.Select((x,i) => $2a{ i+1} = {x})
         }
     }
 }
