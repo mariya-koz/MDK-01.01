@@ -9,7 +9,17 @@ namespace _1_var7
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { /*
+           1. С клавиатуры ввести массив из n вещественных чисел. Найти разницу между максимальным и минимальным элементом массива.
+           */
+            Console.Write("Сколко элементов будет в массиве? ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int [] array = new int[n];
+            Console.Write("Введите элементы массива");
+            for (int i = 0; i < n; i++)
+            {
+                array[i]= Convert.ToInt32(Console.ReadLine());
+            }
         }
     }
 }
