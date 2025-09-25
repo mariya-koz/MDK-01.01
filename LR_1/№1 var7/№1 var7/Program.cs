@@ -15,7 +15,7 @@ namespace _1_var7
             Console.Write("Сколко элементов будет в массиве? ");
             int n = Convert.ToInt32(Console.ReadLine());
             int [] array = new int[n];
-            Console.Write("Введите элементы массива");
+            Console.Write("Введите элементы массива: ");
             for (int i = 0; i < n; i++)
             {
                 array[i]= Convert.ToInt32(Console.ReadLine());
@@ -30,6 +30,8 @@ namespace _1_var7
             {
                 if (array[i] < min) min = array[i];
             }
+            int dif = max - min;
+            Console.Write("разница между максимальным и минимальным элементом массива: " + dif);
         }
     }
 }
