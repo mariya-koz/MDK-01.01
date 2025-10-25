@@ -19,6 +19,7 @@ namespace dictionary
                 dict.Add(holidays, new List<string>() { "спать", "кушать", "отдыхать" });
             Console.WriteLine(string.Join(", ", dict.Keys));
             Console.WriteLine("выберите одну из указанных категорий");
+
             string x = Console.ReadLine();
             if (x == "спать") 
             {
@@ -30,11 +31,12 @@ namespace dictionary
                 List<string> d = dict[eat];
                 Console.WriteLine(string.Join(", ", d));
             }
-            else
+            else if (x== "выходные")
             {
                 List<string> d = dict[holidays];
                 Console.WriteLine(string.Join(", ", d));
             }
+            else { Console.WriteLine("Вы ввели ерунду"); }
         }
     }
 }
