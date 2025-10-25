@@ -18,7 +18,23 @@ namespace dictionary
                 string holidays = "выходные";
                 dict.Add(holidays, new List<string>() { "спать", "кушать", "отдыхать" });
             Console.WriteLine(string.Join(", ", dict.Keys));
-            
+            Console.WriteLine("выберите одну из указанных категорий");
+            string x = Console.ReadLine();
+            if (x == "спать") 
+            {
+                List<string> d = dict[slip];
+                Console.WriteLine(string.Join(", ", d));
+            }
+            else if (x== "кушать") 
+            {
+                List<string> d = dict[eat];
+                Console.WriteLine(string.Join(", ", d));
+            }
+            else
+            {
+                List<string> d = dict[holidays];
+                Console.WriteLine(string.Join(", ", d));
+            }
         }
     }
 }
