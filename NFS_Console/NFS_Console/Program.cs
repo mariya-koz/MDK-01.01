@@ -2,12 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace NFS_Console
 {
     class Program
     {
+        static void WriteModel(Car mod)
+        {
+            Console.WriteLine(mod.GetModel());
+        }
+
+        static void Lada_vs_Merc(List<Car> cars)
+        {
+            foreach (Car car in cars)
+            {
+                int move = car.GetSpeed();
+                for (int i = 0; i < move; i += 50)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write(car.GetModel());
+            }
+            Thread.Sleep(1000);
+            Console.Clear();
+        }
+
+
         static void Main(string[] args)
         {
             Car c1 = new Car();
@@ -25,11 +47,9 @@ namespace NFS_Console
             List<Car> cars = new List<Car>();
             cars.Add(c1);
             cars.Add(c2);
+            
+            Lada_vs_Merc(cars);
         }
 
-        static void WriteModel(Car mod)
-        {
-            Console.WriteLine(mod.GetModel());
-        }
     }
 }

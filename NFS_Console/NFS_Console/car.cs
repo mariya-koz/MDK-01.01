@@ -8,10 +8,10 @@ namespace NFS_Console
 {
     class Car
     {
-        private string model;
-        private int speed;
+        private string model_;
+        private int speed_;
 
-        public void SetModel(string model_)
+        public void SetModel(string model)
         {
             model_ = model;
         }
@@ -21,9 +21,16 @@ namespace NFS_Console
             return model_;
         }
 
-        public void SetSpeed (int speed_)
+        public int GetSpeed()
+        {
+            return speed_;
+        }
+
+
+        public void SetSpeed (int speed)
         {
             speed_ = speed;
         }
+
     }
 }
