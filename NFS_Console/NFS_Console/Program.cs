@@ -16,37 +16,52 @@ namespace NFS_Console
 
         static void Lada_vs_Merc(List<Car> cars)
         {
-            foreach (Car car in cars)
+            int z = 678;
+            while (z>0)
             {
-                int move = car.GetSpeed();
-                for (int i = 0; i < move; i += 50)
+                Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+                foreach (Car car in cars)
                 {
-                    Console.Write(" ");
+                    int move = (car.GetSpeed() / 50);
+                    for (int i = 0; i < move; i++)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write(car.GetModel());
                 }
-                Console.Write(car.GetModel());
+                Console.WriteLine(" ");
+                Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+                Thread.Sleep(1000);
+                //Console.Clear();
             }
-            Thread.Sleep(1000);
-            Console.Clear();
         }
-
 
         static void Main(string[] args)
         {
             Car c1 = new Car();
             c1.SetModel("Lada");
             c1.SetSpeed(150);
-            Console.WriteLine(c1.GetModel());
+           // Console.WriteLine(c1.GetModel());
 
             Car c2 = new Car();
             c2.SetModel("Mercedes");
             c2.SetSpeed(300);
 
-            WriteModel(c1);
-            WriteModel(c2);
+           // WriteModel(c1);
+           // WriteModel(c2);
 
             List<Car> cars = new List<Car>();
             cars.Add(c1);
             cars.Add(c2);
+            Random rnd = new Random();
+            for (int q=0; q<10; q++)
+            {
+                Car car = new Car();
+                car.SetModel("Car" + rnd.Next(100, 1000));
+                car.SetSpeed(rnd.Next(50, 10000));
+                cars.Add(car);
+            }
+
             
             Lada_vs_Merc(cars);
         }
