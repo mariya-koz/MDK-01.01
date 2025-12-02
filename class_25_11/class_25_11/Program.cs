@@ -26,7 +26,8 @@ namespace class_25_11
             w1.SetProducts(p1, 2);
             w1.SetProducts(p2, 5);
 
-
+            w1.GetProductQantity();
+            w1.SumPrice();
         }
     }
 }

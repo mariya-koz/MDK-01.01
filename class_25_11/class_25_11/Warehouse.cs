@@ -37,9 +37,22 @@ namespace class_25_11
             return;
         }
 
-        public void GetProducts()
+        public void GetProductQantity()
         {
-            return;
+            foreach (Product product in products_.Keys)
+            {
+                Console.WriteLine($"Товар: {product.GetName() + " " + products_[product]} шт.");
+            }
+        }
+
+        public void SumPrice()
+        {
+            double sum = 0;
+            foreach (Product product in products_.Keys)
+            {
+                sum += product.GetPrice() * products_[product];
+            }
+            Console.WriteLine(sum);
         }
     }
 }

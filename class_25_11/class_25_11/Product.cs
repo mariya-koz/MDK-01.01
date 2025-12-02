@@ -10,6 +10,15 @@ namespace class_25_11
     {
         private string name_;
         private double price_;
+        public double GetPrice()
+        {
+            return price_;
+        }
+        public string GetName()
+        {
+            return name_;
+        }
+
 
         public void SetName(string name)
         {
@@ -19,16 +28,6 @@ namespace class_25_11
         public void SetPrice(double price)
         {
             price = price_;
-        }
-
-        public void GetName()
-        {
-            return;
-        }
-
-        public void GetPrice()
-        {
-            return;
         }
     }
 }
