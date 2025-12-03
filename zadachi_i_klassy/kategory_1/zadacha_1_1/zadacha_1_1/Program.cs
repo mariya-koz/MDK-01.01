@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadachi_i_klassy
+namespace zadacha_1_1
 {
-    internal class FreelancerEmployee
+    internal class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

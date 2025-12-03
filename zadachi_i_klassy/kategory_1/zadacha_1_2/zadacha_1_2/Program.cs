@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadachi_i_klassy
+namespace zadacha_1_2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("/");
         }
     }
 }

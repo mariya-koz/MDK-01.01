@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{778D26E1-B5FF-476B-86A5-BE1008FBEEC2}</ProjectGuid>
+    <ProjectGuid>{904AAD34-FC30-40B7-B2DD-B065FD3124D8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>zadachi_i_klassy</RootNamespace>
-    <AssemblyName>zadachi_i_klassy</AssemblyName>
+    <RootNamespace>zadacha_1_1</RootNamespace>
+    <AssemblyName>zadacha_1_1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
