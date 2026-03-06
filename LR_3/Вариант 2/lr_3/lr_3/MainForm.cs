@@ -18,31 +18,6 @@ namespace lr_3
         {
             InitializeComponent();
 
-            products_.Add("Фрукты",
-                new List<Product>()
-                {
-                    new Product ("Мандарины", 23.0, 5),
-                    new Product ("Гранаты", 50.0, 7)
-                }
-            );
-
-            products_.Add("Овощи",
-                new List<Product>()
-                {
-                    new Product ("Огурцы", 6.0, 6),
-                    new Product ("Помидоры", 5.0, 5)
-                }
-            );
-
-            products_.Add("Мясо",
-                new List<Product>()
-                {
-                    new Product ("Курица", 70.0, 10),
-                    new Product ("Говядина", 100.0, 10)
-                }
-            );
-
-
             List<string> allCategories = products_.Keys.ToList();
             ProductListBox.DataSource = allCategories;
         }
