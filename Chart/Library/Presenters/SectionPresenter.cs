@@ -9,29 +9,41 @@ namespace Library.Presenters
 {
     public class SectionPresenter
     {
-        private SectionPresenter model_ = new DaysPresenter();
-        private List<ISectionView> views_;
-        public SectionPresenter (List<ISectionView> views)
+        public class DaysPresenter
         {
-            views_ = views;
-            model_.Load();
-        }
-        public void ShowSectionsByDays(string dayName)
-        {
-            List<Section>sections = model_.LoadSectionsForDay(dayName);
-            foreach (ISectionView view in views_)
+            private DaysModel model_ = new DaysModel();
+            private List<IDaysView> views_;
+            public DaysPresenter(List<IDaysView> views)
             {
-                view.Show(sections);
+                views_ = views;
+
+                model_.Load();
             }
-        }
-        public List<Days> GetAllDays()
-        {
-            return model_.GetAllDays();
-        }
-        public double GetProfitPresentByDay(Days selectedDay)
-        {
-            // доделать, когда создам анализ и подсчет прибыли
-            return;
+
+            public void ShowSalesByItem(string itemName)
+            {
+                List<Days> sales = model_.LoadSalesForItem(itemName);
+                foreach (IDaysView view in views_)
+                {
+                    view.Show(sales);
+                }
+            }
+
+            /// <summary>
+            /// с помощью этого метода можно получить список всех продаваемых
+            /// элементов в системе (товаров, услуг, .....)
+            /// </summary>
+            /// <returns>Список элементов</returns>
+            public List<Section> GetAllItems()
+            {
+                return model_.GetAllItems();
+            }
+
+            public double GetProfitPercentByItem(Section selectedItem)
+            {
+                return Math.Round(ProfitAnalyzer.CalculateProfitPercentByItem(selectedItem.Name,
+                                                                   model_), 2);
+            }
         }
     }
 }

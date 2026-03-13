@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace _13_03_26.View
 {
-    public interface ISectionView
+    public interface IDaysView
     {
-        void Show (List<Days> sections);
+        void Show (List<Days> days);
     }
 }
