@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace lr_3
 {
-    internal class Product
+    public class Product
     {
         private string name_;
         private double price_;
         private int expiryDate_;
+        private string picture_;
 
-        public Product(string name, double price, int date) 
+        public Product(string name, double price, int date, string picture) 
         {
             name_ = name;
             price_ = price;
             expiryDate_ = date;
+            picture_ = picture;
         }
 
         public string Name
@@ -33,6 +35,9 @@ namespace lr_3
         {
             get { return expiryDate_.ToString(); }
         }
-
+        public string Picture
+        {
+            get { return picture_; } 
+        }
     }
 }

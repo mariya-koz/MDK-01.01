@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library
+namespace Library.View
 {
-    public class Class1
+    internal interface IProduct
     {
+        Dictionary<string, List<Product>> Products;
     }
 }
