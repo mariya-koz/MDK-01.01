@@ -46,5 +46,6 @@ namespace Test_Lr3
             Assert.AreEqual("Мандарины", fruits[0].Name, "Первый товар должен быть 'Мандарины'");
             Assert.AreEqual("Гранаты", fruits[1].Name, "Второй товар должен быть 'Гранаты'");
         }
+
     }
 }
