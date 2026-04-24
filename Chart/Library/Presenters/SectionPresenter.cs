@@ -1,4 +1,6 @@
 ﻿using _13_03_26.View;
+using Library.Analisys;
+using Library.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,12 +38,12 @@ namespace Library.Presenters
             /// <returns>Список элементов</returns>
             public List<Section> GetAllItems()
             {
-                return model_.GetAllItems();
+                return model_.GetAllSection();
             }
 
             public double GetProfitPercentByItem(Section selectedItem)
             {
-                return Math.Round(ProfitAnalyzer.CalculateProfitPercentByItem(selectedItem.Name,
+                return Math.Round(ProfitAnalizer.CalculateProfitPercentBySection(selectedItem.Name,
                                                                    model_), 2);
             }
         }

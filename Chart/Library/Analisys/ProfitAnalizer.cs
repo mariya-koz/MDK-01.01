@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Library.Analisys
         public static double CalculateProfitPercentBySection(string sectionName, DaysModel model)
         {
             /// 1. Получить выручку товара (услуги, ....) itemName
-            List<Days> sectionSales = model.LoadDaysForSection(sectionName);
+            List<Days> sectionSales = model.LoadSalesForItem(sectionName);
             Section targetSection = model.GetSection(sectionName);
             if (targetSection == null)
             {
